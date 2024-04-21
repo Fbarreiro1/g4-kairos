@@ -1,0 +1,8 @@
+.disable{
+    display: none;
+}
+
+.homeContainer{
+    animation: activePag .5s ease-in-out;
+}
+

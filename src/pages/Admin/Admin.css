@@ -1,0 +1,188 @@
+
+.regVisible{
+    display: flex;
+    z-index: 100;
+    background-color: rgb(0, 0, 0, .7);
+    height: 100vh;
+    position: fixed;
+    animation: activePag .3s ease-in-out;
+}
+
+.disable{
+    display: none;
+}
+
+.registerContainer{
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.avatarReg{
+    width: 20vh;
+    border-radius: 50px;
+    border: solid 3px #4ec3cc;
+}
+
+.formRegContainer{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    align-items: center;
+    margin-top: 4vh;
+
+}
+
+.labelReg{
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    text-align: center;
+    color: #fff
+}
+
+.labelReg>input{
+    transition: all .5s;
+}
+
+.labelReg>input:focus{
+    outline: solid 2px #4ec3cc; 
+}
+
+.labelReg>input:hover{
+    border: solid 2px #4ec3cc;
+}
+
+.botReg{
+    margin-top: 4vh;
+    text-decoration: none;
+    border: solid 2px #fff;
+    background-color: transparent;
+    padding: 10px;
+    width: 10%;
+    border-radius: 25px;
+    transition: all .5s;
+    color: #fff;
+}
+
+.botReg:hover{
+    border: solid 2px #4ec3cc;  
+    color: #4ec3cc;
+}
+
+.xRegister{
+    display: flex;
+    position: absolute;
+    right: 5vw;
+    top: 5vh;
+    color: #fff;
+    width: 8vh;
+    height: 8vh;
+}
+
+.xRegister:hover{
+    cursor: pointer;
+}
+
+
+.moduloRegUsers{
+    display: flex;
+    flex-direction: column;
+    color: #767676;
+    position: absolute;
+    width: 60vw;
+    right: 0;
+    top: 20vh;
+}
+
+.moduloRegProf{
+    display: flex;
+    flex-direction: column;
+    color: #767676;
+    position: absolute;
+    width: 60vw;
+    right: 0;
+    top: 20vh;
+}
+
+.activeModule{
+    animation: activePag .5s ease-in-out;
+}
+
+
+.moduloRegUsers>ul{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+}
+
+.moduloRegUsers>ul>li{
+    display: flex;
+    flex-direction: row;
+    margin-top: 2vh;
+}
+
+.deletUserButton{
+    border: solid 2px #f86565;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 1vw;
+    color: #f86565;
+    transition: all .5s;
+}
+
+.deletUserButton:hover{
+    cursor: pointer;
+    background-color: #f86565;
+    color: #fff;
+}
+
+.regButtonNew{
+    border: solid 2px #059641;
+    color:#059641;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20vw;
+    padding: 1px;
+    border-radius: 10px;
+    margin-left: 2vw;
+    margin-top: 2vh;
+    transition: all .5s;
+}
+
+.regButtonNew:hover{
+    cursor: pointer;
+    color: #fff;
+    background-color: #059641;
+}
+
+.selectTipoUser{
+    margin-top: 3vh;
+}
+
+.selectTipoUser:hover{
+    cursor: pointer;
+}
+
+
+
+/* SOLAPAS CONTAINER */
+.solapasContainer{
+    margin-top: 5vh;
+    width: 33vw;
+    animation: activePag .5s ease-in-out;
+}
+
+.active{
+    transition: all .5s;
+}
+
+.list-group-item{
+    font-size: 2vw;
+    height: 15vh;
+}
