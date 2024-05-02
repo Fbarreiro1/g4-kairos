@@ -29,7 +29,7 @@ function Home() {
 
 
   return (
-    <div>
+    <div className='homeContainerAll'>
         <NavBar/>
       <div className='homeContainer'>
       <h1>Hola {nombreUsuario}</h1>

@@ -95,7 +95,7 @@ function Admin() {
 
 
   return (
-    <div>
+    <div className='adminContainerAll'>
 
 
 

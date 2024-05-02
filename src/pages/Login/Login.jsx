@@ -71,7 +71,7 @@ function Login() {
         Contraseña:
         <input type="password" name="password" value={formData.password} onChange={handleChange} />
       </label>
-      <button type="submit" className='botLog'>Enviar</button>
+      <button type="submit" className='botLog'>INGRESAR</button>
     </form>
     </div>
 
