@@ -12,8 +12,8 @@ function Login() {
   const [data, setData] = useState([]);
   const navigate = useNavigate();
   const [formData, setFormData] = useState({
-    nombre_usuario: '',
-    password: ''
+    USERNAME: '',
+    PASSWORD: ''
   });
 
 
@@ -38,15 +38,17 @@ function Login() {
     e.preventDefault();
     try{
         await fetchData('usuarios');
-        const usuarioRegistrado = data.find(usuario => usuario.nombre_usuario === formData.nombre_usuario);
+        const usuarioRegistrado = data.find(usuario => usuario.USERNAME === formData.USERNAME);
         if(!usuarioRegistrado){
           alert('El usuario no está registrado');
         } else{
-          if (usuarioRegistrado.password === formData.password){
-            guardarDato('nombre_usuario', usuarioRegistrado.nombre_usuario);
-            guardarDato('tipo', usuarioRegistrado.tipo);
+          if (usuarioRegistrado.PASSWORD === formData.PASSWORD){
+            guardarDato('USERNAME', usuarioRegistrado.USERNAME);
+            guardarDato('tipo', usuarioRegistrado.TIPO);
+            guardarDato('campo', usuarioRegistrado.CAMPO);
+            guardarDato('clinica', usuarioRegistrado.FK_CLINICAS);
             navigate("/home");
-          }else{
+          }else{  
             alert('Contraseña incorrecta');
           }
         }
@@ -65,11 +67,11 @@ function Login() {
       <form onSubmit={handleLogin} className='formLogContainer'>
       <label className='labelLog'>
         Nombre de usuario:
-        <input type="text" name="nombre_usuario" value={formData.nombre_usuario} onChange={handleChange} />
+        <input type="text" name="USERNAME" value={formData.USERNAME} onChange={handleChange} />
       </label>
       <label className='labelLog'>
         Contraseña:
-        <input type="password" name="password" value={formData.password} onChange={handleChange} />
+        <input type="PASSWORD" name="PASSWORD" value={formData.PASSWORD} onChange={handleChange} />
       </label>
       <button type="submit" className='botLog'>INGRESAR</button>
     </form>

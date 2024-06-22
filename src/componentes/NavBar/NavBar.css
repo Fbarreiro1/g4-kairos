@@ -1,5 +1,6 @@
 .navbar{
     background-color: #01141b !important;
+    height: vh;
 }
 
 .nav-link{
@@ -42,51 +43,16 @@
 
 .nav-item{
     margin-left: 3vw;
+    display: flex;
 }
 
 .nav-item:hover{
  cursor: pointer;
+ text-shadow:#b1bcc2 ;
 }
 
 
-.dropDownNavBar{
-   display: flex;
-   flex-direction: column;
-   position: fixed;
-   background-color: #01141b;
-   color: #fcfdfe;
-   height: 10vh;
-   width: 15vh;
-   margin-top: 1.1vh;
-   animation: dropdown .3s linear;
+.iconLogout{
+    margin-left: .5vw;
+    height: 3vh;
 }
-
-
-@keyframes dropdown {
-    0%{
-        height: 0;
-        font-size: 0;
-        color: transparent;
-    }
-    100%{
-        height: 10vh;
-    }
-}
-
-
-.dropDownNavBar>div{
-    text-align: center;
-    margin-top: 2vh; 
-    height: 5vh;
-    transition: all .3s;   
-    font-weight: 300;
-    padding-top: .6vh;
-}
-
-.dropDownNavBar>div:hover{
-    background-color: #b1bcc2;
-    color: #01141b;
-}
-
-
-

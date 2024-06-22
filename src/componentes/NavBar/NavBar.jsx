@@ -2,28 +2,41 @@ import React, { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { eliminarDato, obtenerDato  } from '../../funciones/localStorageUtils.js';
 import logo from '../../media/logo.jpg';
+import {IconLogout} from '@tabler/icons-react';
 
 import './NavBar.css'
 
 const NavBar = () => {
   const navigate = useNavigate();
   const tipo = obtenerDato('tipo');
-  const usuario = obtenerDato('nombre_usuario');
+  const nombreUsuario = obtenerDato('USERNAME');
   const [isAdmin, setIsAdmin] = useState(false);
-  const [clicked, setClicked] = useState(false);
+  const [isProf, setIsProf] = useState(false);
+  const [isClin, setIsClin] = useState(false);
 
   useEffect(() => {
-    setIsAdmin(tipo === 'A');
+    setIsAdmin(tipo === 'AD' || tipo === 'CO');
   }, [tipo]);
 
+
+
+  useEffect(() => {
+    setIsProf(tipo === 'PR');
+  }, [tipo]);
+
+  useEffect(() => {
+    setIsClin(tipo === 'CL');
+  }, [tipo]);
+
+
   
-  const handleClick = () =>{
-    setClicked(!clicked);
-  }
+
 
   const handleExit = () => {
-    eliminarDato('nombre_usuario');
+    eliminarDato('USERNAME');
     eliminarDato('tipo');
+    eliminarDato('clinica');
+    eliminarDato('campo');
     navigate('/');
   }
 
@@ -41,15 +54,14 @@ const NavBar = () => {
         <Link to={'/home'} className="nav-link active" aria-current="page">Home</Link>
         </li>
         <li className="nav-item">
-        <Link to={'/admin'} className={isAdmin ? 'isAdmin nav-link' : 'notAdmin nav-link'} >Administrador</Link>
+        <Link to={'/admin'} className={isAdmin ? 'isAdmin nav-link' : 'notAdmin nav-link'}>Administrador</Link>
+        <Link to={'/turnos-disponibles'} className={isProf ? 'isAdmin nav-link' : 'notAdmin nav-link'}>Turnos Disponibles</Link>
+        <Link to={'/turnos-disponibles'} className={isClin ? 'isAdmin nav-link' : 'notAdmin nav-link'}>Turnos Disponibles</Link>
         </li>
         <li className="nav-item ">
-          <a className="nav-link " aria-expanded="false" onClick={handleClick}>
-            {usuario}
+          <a className="nav-link " aria-expanded="false" onClick={handleExit}>
+          {nombreUsuario}<IconLogout className='iconLogout'/>
           </a>
-          <div className={clicked ? 'dropDownNavBar' : 'disable'}>
-          <div onClick={handleExit}>Salir</div>
-          </div>
         </li>
       </ul>
     </div>
