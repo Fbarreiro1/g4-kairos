@@ -1,4 +1,4 @@
-const BASE_URL = 'https://g4tpback-production.up.railway.app'; // La URL de tu servidor Node.js
+const BASE_URL = 'https://g4tpback-production.up.railway.app'; // La URL de nuestro servidor Node.js
 
 export const fetchData = async (endpoint, method = 'GET', body = null) => {
   const options = {
