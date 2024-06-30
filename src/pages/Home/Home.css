@@ -21,7 +21,7 @@ position: fixed;
 .grid-container {
     margin-left: 1vw;
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 columnas de ancho igual */
+    grid-template-columns: repeat(3, 1fr); 
     grid-column-gap: 0px;
     grid-row-gap:2vh;
     margin-right: 2vw;
@@ -56,7 +56,7 @@ position: fixed;
     background-color: #fff;
     width: 30vw;
     height: 27vh;
-    padding: 10px;
+    padding: 10px;  
     font-weight: 400;
     border-radius: 20px;
     box-shadow: -1px 4px 14px 0px rgba(1,20,27,0.75);
@@ -113,4 +113,46 @@ position: fixed;
   cursor: pointer;
   transform: scale(.95);
 
+}
+
+@media
+(width >= 600px) and (width <= 1200px){
+  .grid-container{
+    grid-template-columns: repeat(2, 1fr) !important; 
+  }
+
+  .grid-item{
+    width: 90% !important;
+    height: 27vw !important;
+    font-size: 2vw;
+  }
+
+  .cancelarButton{
+    width: 20vw;
+    margin-left: 19vw;
+    margin-top: 0vh;
+    font-size: 2vw;
+}
+}
+
+@media
+(width <= 600px) {
+  .grid-container{
+    grid-template-columns: repeat(1, 85vw) !important; 
+    overflow-x: hidden;
+  }
+
+  .grid-item{
+    width: 90% !important;
+    height: 25vh !important;
+  }
+
+  .cancelarButton{
+    width: 32vw;
+    position: sticky;
+    margin-left: 40vw;
+    margin-top: -3vh;
+    font-size: 2.2vh;
+    padding: 3px;
+}
 }

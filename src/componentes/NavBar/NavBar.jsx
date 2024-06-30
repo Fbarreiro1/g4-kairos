@@ -42,24 +42,21 @@ const NavBar = () => {
 
   return (
     <div>
-      <nav className="navbar navbar-expand-lg bg-body-tertiary">
-  <div className="container-fluid">
-    <Link to={'/home'} className="navbar-brand"><img src={logo} alt='logo de una G y un 4' className='logoNavBar'/></Link>
-    <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span className="navbar-toggler-icon"></span>
-    </button>
-    <div className="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-        <li className="nav-item">
-        <Link to={'/home'} className="nav-link active" aria-current="page">Home</Link>
+      <nav className="navbarContainer">
+  <div className="container-fluid-cont">
+    <Link to={'/home'} className="navbar-brand-cont"><img src={logo} alt='logo de una G y un 4' className='logoNavBar'/></Link>
+    <div>
+      <ul className="navbar-nav-cont">
+        <li className="nav-item-cont">
+        <Link to={'/home'} className="nav-link-cont active" aria-current="page">Home</Link>
         </li>
-        <li className="nav-item">
-        <Link to={'/admin'} className={isAdmin ? 'isAdmin nav-link' : 'notAdmin nav-link'}>Administrador</Link>
-        <Link to={'/turnos-disponibles'} className={isProf ? 'isAdmin nav-link' : 'notAdmin nav-link'}>Turnos Disponibles</Link>
-        <Link to={'/turnos-disponibles'} className={isClin ? 'isAdmin nav-link' : 'notAdmin nav-link'}>Turnos Disponibles</Link>
+        <li className="nav-item-cont">
+        <Link to={'/admin'} className={isAdmin ? 'isAdmin nav-link-cont' : 'notAdmin nav-link-cont'}>Administrador</Link>
+        <Link to={'/turnos-disponibles'} className={isProf ? 'isAdmin nav-link-cont' : 'notAdmin nav-link-cont'}>Turnos Disponibles</Link>
+        <Link to={'/turnos-disponibles'} className={isClin ? 'isAdmin nav-link-cont' : 'notAdmin nav-link-cont'}>Turnos Disponibles</Link>
         </li>
-        <li className="nav-item ">
-          <a className="nav-link " aria-expanded="false" onClick={handleExit}>
+        <li className="nav-item-cont ">
+          <a className="nav-link-cont " aria-expanded="false" onClick={handleExit}>
           {nombreUsuario}<IconLogout className='iconLogout'/>
           </a>
         </li>

@@ -138,7 +138,7 @@ function Home() {
   function PacList({data, reloadData}) {
     return (<div>
       <div className={turnosPac.length === 0 ? 'noTurnos' : 'disable'}><span>NO HAY TURNOS<br/>ASIGNADOS</span></div>
-      <div class="grid-container">
+      <div className="grid-container">
       {turnosPac.map(turno => (
       <div className="grid-item">
        FECHA: {formatDate(turno.FECHA)}<br/>
@@ -180,7 +180,7 @@ function Home() {
       return (
         <div>
         <div className={turnosAdmin.length === 0 ? 'noTurnos' : 'disable'}><span>NO HAY TURNOS<br/>PENDIENTES</span></div>
-        <div class="grid-container">
+        <div className="grid-container">
       {turnosAdmin.map(turno => (
       <div className="grid-item">
         FECHA: {formatDate(turno.FECHA)}<br/>

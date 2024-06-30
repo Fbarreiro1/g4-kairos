@@ -7,6 +7,7 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
 background-attachment: fixed;
 background-size: cover;
     height: 100vh;
+    overflow: hidden;
 }
 
 
@@ -24,7 +25,6 @@ background-size: cover;
     box-shadow: 2px 4px 19px 0px rgba(0, 0, 0, 0.75);
     -webkit-box-shadow: 2px 4px 19px 0px rgba(0, 0, 0, 0.75);
     -moz-box-shadow: 2px 4px 19px 0px rgba(0, 0, 0, 0.75); 
-
 }
 
 .formLogContainer{
@@ -83,4 +83,81 @@ background-size: cover;
     border: solid 3px #b1bcc2;
     margin-top: 10vh;
     background-color: #fff;
+}
+
+@media (width <= 950px){
+    .loginContainer{
+        width: 70vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+        font-weight: 500;
+        animation: activePag .5s ease-in-out;
+        background-color: #01141b;
+        border-radius: 30px;
+        box-shadow: 2px 4px 19px 0px rgba(0, 0, 0, 0.75);
+        -webkit-box-shadow: 2px 4px 19px 0px rgba(0, 0, 0, 0.75);
+        -moz-box-shadow: 2px 4px 19px 0px rgba(0, 0, 0, 0.75); 
+    
+    }
+    
+    .formLogContainer{
+        display: flex;
+        flex-direction: column;
+        width: 200%;
+        align-items: center;
+        margin-top: 4vh;
+    
+    }
+    
+    .labelLog{
+        display: flex;
+        flex-direction: column;
+        width: 25%;
+        text-align: center;
+    }
+    
+    .labelLog>input{
+        transition: all .5s;
+        color: #01141b;
+        font-weight: 300;
+    }
+    
+    .labelLog>input:focus{
+        outline: solid 2px #b1bcc2; 
+    }
+    
+    .labelLog>input:hover{
+        border: solid 2px #b1bcc2;
+    }
+    
+    .botLog{
+        margin-top: 4vh;
+        text-decoration: none;
+        background-color:  #01141b;  
+        color: #fff;
+        border: solid 3px #fff;
+        padding: 10px;
+        width: 20%;
+        border-radius: 25px;
+        transition: all .5s;
+        margin-bottom: 5vh;
+        font-weight: 500;
+    }
+    
+    .botLog:hover{
+        border: solid 3px #01141b;
+        color: #01141b;
+        background-color: #ffff;
+    }
+    
+    .avatarLog{
+        width: 20vh;
+        border-radius: 50px;
+        border: solid 3px #b1bcc2;
+        margin-top: 10vh;
+        background-color: #fff;
+    }
 }

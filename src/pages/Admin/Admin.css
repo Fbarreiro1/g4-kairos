@@ -318,3 +318,90 @@ transform: scale(1.1);
     background-color: #01141b;
     color: #fff;
 }
+
+
+/* responsive */
+
+@media (width >= 600px) and (width <= 1200px){
+    .regButtonNew{
+        justify-content: center;
+        border-radius: 30px;
+        left: 42vw;
+        width: 8vh;
+        height: 8vh;
+        top: 0vh;
+    }
+
+    .moduloRegData>ul>li{
+        width:40vw;
+    }
+    .list-group-item{
+        font-size: 4vw;
+    }
+}
+@media (width <= 800px) {
+
+    .regButtonNew{
+        justify-content: center;
+        border-radius: 30px;
+        left: 42vw;
+        width: 8vh;
+        height: 8vh;
+        top: 0vh;
+    }
+
+    .moduloRegData>ul>li{
+        width:40vw;
+    }
+    .list-group-item{
+        font-size: 4vw;
+    }
+    
+    .avatarReg{
+        width: 10vh;
+    }
+    
+    .formRegContainer{
+        width: 80vw;
+    }
+    
+    .formRegContainer1{
+    width: 80vw;
+    top: 18vh;
+    height: 70vh
+    }
+    
+    .labelReg{
+        width: 50vw;
+    }
+    
+    .selectTipoUser{
+        width: 50vw;
+    }
+    
+    .botReg{
+        width: 30vw;
+    }
+
+    .labelRegRight{
+        width: 33vw;
+        left: 15vw;
+    }
+    .labelRegLeft{
+        width: 33vw;
+    }
+    
+    .regCampo{
+        width: 33vw; 
+    }
+    .regClinica{
+        width: 33vw;
+    }
+    .regTipo{
+        width: 33vw;
+    }
+    .botRegEnviar{
+        left: 53vw;
+    }
+    
+}
