@@ -55,6 +55,7 @@ function Login() {
     }
     catch (error){
         console.error('Error', error);
+        alert('Error de servidor');
     }
   };
 

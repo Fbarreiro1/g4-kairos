@@ -45,6 +45,7 @@ function Home() {
         reloadData();
       } catch (error) {
         console.error('Error al eliminar el turno:', error);
+        alert('Error al eliminar el turno');
       }
     };
     return (
@@ -93,6 +94,7 @@ function Home() {
         reloadData();
       } catch (error) {
         console.error('Error al eliminar el turno:', error);
+        alert('Error al eliminar el turno');
       }
     };
     return (
@@ -174,6 +176,7 @@ function Home() {
           reloadData();
         } catch (error) {
           console.error('Error al eliminar el turno:', error);
+          alert('Error al eliminar el turno');
         }
       };
 

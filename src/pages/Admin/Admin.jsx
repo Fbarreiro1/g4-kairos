@@ -127,6 +127,7 @@ function Admin() {
     }
     catch (error){
         console.error('Error', error);
+        alert('Error al cargar un nuevo usuario');
     }
   };
 
@@ -138,6 +139,7 @@ function Admin() {
           reloadData();
         } catch (error) {
           console.error('Error al eliminar el usuario:', error);
+          alert('Error al eliminar el usuario');
         }
       };
 
@@ -200,6 +202,7 @@ function Admin() {
     }
     catch (error){
         console.error('Error', error);
+        alert('Error al cargar una nueva clinica');
     }
   };
 
@@ -213,6 +216,7 @@ function Admin() {
           reloadData();
         } catch (error) {
           console.error('Error al eliminar la clinica:', error);
+          alert('Error al eliminar la clinica');
         }
       };
 
@@ -290,6 +294,7 @@ const handleSubmitPacientes = async (e)=>{
   }
   catch (error){
       console.error('Error', error);
+      alert('Error al cargar un nuevo paciente');
   }
 };
 
@@ -304,6 +309,7 @@ function PacientesList({ data, reloadData  }) {
         fetchDataUsersAndUpdate();
       } catch (error) {
         console.error('Error al eliminar el paciente:', error);
+        alert('Error al eliminar el paciente');
       }
     };
 
@@ -360,6 +366,7 @@ const handleSubmitTurnos = async (e)=>{
   }
   catch (error){
       console.error('Error', error);
+      alert('Error al cargar un nuevo turno');
   }
 };
 
@@ -373,6 +380,7 @@ function TurnosList({ data, reloadData  }) {
         reloadData();
       } catch (error) {
         console.error('Error al eliminar el turno:', error);
+        alert('Error al eliminar el turno');
       }
     };
 
@@ -430,6 +438,7 @@ const handleSubmitTipos = async (e)=>{
   }
   catch (error){
       console.error('Error', error);
+      alert('Error al cargar un nuevo tipo');
   }
 };
 
@@ -442,7 +451,8 @@ function TiposList({ data, reloadData  }) {
         // Después de eliminar, recargar los datos
         reloadData();
       } catch (error) {
-        console.error('Error al eliminar el turno:', error);
+        console.error('Error al eliminar el tipo:', error);
+        alert('Error al eliminar el tipo');
       }
     };
 
@@ -493,6 +503,7 @@ const handleSubmitCampos = async (e)=>{
   }
   catch (error){
       console.error('Error', error);
+      alert('Error al cargar un nuevo campo');
   }
 };
 
@@ -505,7 +516,8 @@ function CamposList({ data, reloadData  }) {
         // Después de eliminar, recargar los datos
         reloadData();
       } catch (error) {
-        console.error('Error al eliminar el turno:', error);
+        console.error('Error al eliminar el campo:', error);
+        alert('Error al cargar el campo');
       }
     };
 
