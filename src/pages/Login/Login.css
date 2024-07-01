@@ -161,3 +161,10 @@ background-size: cover;
         background-color: #fff;
     }
 }
+
+@media (width <= 600px){
+    .avatarLog{
+        width: 15vh;
+        margin-top: 5vh;
+    }
+}

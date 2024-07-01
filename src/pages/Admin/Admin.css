@@ -349,7 +349,9 @@ transform: scale(1.1);
         height: 8vh;
         top: 0vh;
     }
-
+    .activeModule{
+        overflow-x: hidden !important;
+    }
     .moduloRegData>ul>li{
         width:40vw;
     }
@@ -402,6 +404,10 @@ transform: scale(1.1);
     }
     .botRegEnviar{
         left: 53vw;
+    }
+
+    .deletUserButton{
+        width: 4.2vh;
     }
     
 }
