@@ -46,7 +46,7 @@
     margin-top: 5vh;
     animation: activePag ease-in-out 1s forwards;
     opacity: 0;
-    animation-delay: 1.5s;
+    animation-delay: 1s;
     background-color: #fff;
     color: #01141b;
     padding: 10px;
@@ -109,6 +109,10 @@ padding: 10px;
 (width <= 600px) {
     .coverImgWelcom{
         width: 100vw;
+    }
+    .logoHome{
+        margin-top: -10vh;
+        width: 15vh;
     }
     .welcomeContainer>h1{
         font-size: 1.2rem;
