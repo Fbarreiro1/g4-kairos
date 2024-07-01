@@ -701,11 +701,11 @@ return (
       <form onSubmit={handleSubmitTurnos} className='formRegContainer'>
       <label className='labelReg'>
         FECHA:
-        <input type="date" name="FECHA" value={formTurnos.FECHA} onChange={handleChangeTurnos} />
+        <input type="date" name="FECHA" className='regFecha' value={formTurnos.FECHA} onChange={handleChangeTurnos} />
       </label>
       <label className='labelReg'>
         HORA:
-        <input type="time" name="HORA" value={formTurnos.HORA} onChange={handleChangeTurnos} />
+        <input type="time" name="HORA" className='regFecha' value={formTurnos.HORA} onChange={handleChangeTurnos} />
       </label>
       <label className='labelReg'>CAMPO:
       <select name="CAMPO" value={formTurnos.CAMPO} onChange={handleChangeTurnos} required className='selectTipoUser itemCampo'>

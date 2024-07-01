@@ -175,8 +175,8 @@ height: 55vh
     padding: 2px;
     border-radius: 50%;
     display: flex;
-    align-items: end;
-    justify-content: end;
+    align-items: center;
+    justify-content: center;
     color: #fff;
     background-color: #f86565;
     transition: transform .3s ease;
@@ -383,6 +383,9 @@ transform: scale(1.1);
     
     .botReg{
         width: 30vw;
+    }
+    .regFecha{
+        width: 50vw;
     }
 
     .labelRegRight{
