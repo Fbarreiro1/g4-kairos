@@ -5,15 +5,19 @@ import Login from './pages/Login/Login';
 import Exit from './pages/Exit/Exit';
 import Admin from './pages/Admin/Admin';
 import TurnosDisponibles from './pages/TurnosDisponibles/TurnosDisponibles';
-const backendUrl = process.env.REACT_APP_BACKEND_URL;
-
-fetch(`${backendUrl}/usuarios`)
-  .then(response => response.json())
-  .then(data => console.log(data))
-  .catch(error => console.error('Error:', error));
 
 
 function App() {
+  const backendUrl = process.env.REACT_APP_BACKEND_URL;
+
+  
+  useEffect(() => {
+    fetch(`${backendUrl}/usuarios`)
+      .then(response => response.json())
+      .then(data => console.log(data))
+      .catch(error => console.error('Error:', error));
+  }, []);
+  
   return (
     <div className="App">
     <Router>
