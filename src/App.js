@@ -11,12 +11,7 @@ function App() {
  const backendUrl = 'https://kairos-g4solutions-back.vercel.app';
 
   
-  useEffect(() => {
-    fetch(`${backendUrl}/usuarios`)
-      .then(response => response.json())
-      .then(data => console.log(data))
-      .catch(error => console.error('Error:', error));
-  }, []);
+
   
   return (
     <div className="App">
