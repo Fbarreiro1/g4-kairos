@@ -7,6 +7,12 @@ import Admin from './pages/Admin/Admin';
 import TurnosDisponibles from './pages/TurnosDisponibles/TurnosDisponibles';
 const backendUrl = process.env.REACT_APP_BACKEND_URL;
 
+fetch(`${backendUrl}/usuarios`)
+  .then(response => response.json())
+  .then(data => console.log(data))
+  .catch(error => console.error('Error:', error));
+
+
 function App() {
   return (
     <div className="App">
