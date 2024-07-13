@@ -8,7 +8,7 @@ import TurnosDisponibles from './pages/TurnosDisponibles/TurnosDisponibles';
 
 
 function App() {
-  const backendUrl = process.env.REACT_APP_BACKEND_URL;
+ const backendUrl = 'https://kairos-g4solutions-back.vercel.app';
 
   
   useEffect(() => {
