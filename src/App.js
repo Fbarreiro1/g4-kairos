@@ -5,6 +5,7 @@ import Login from './pages/Login/Login';
 import Exit from './pages/Exit/Exit';
 import Admin from './pages/Admin/Admin';
 import TurnosDisponibles from './pages/TurnosDisponibles/TurnosDisponibles';
+const backendUrl = process.env.REACT_APP_BACKEND_URL;
 
 function App() {
   return (
