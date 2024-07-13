@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import avatar from '../../media/avatar.png';
-import { fetchData } from '../../funciones/Api'; // Importa la función fetchData si aún no lo has hecho
+import { fetchData } from '../../funciones/Api'; // Asegúrate de importar fetchData si no lo has hecho
 import { guardarDato } from '../../funciones/localStorageUtils.js';
 
 function Login() {
@@ -25,11 +25,11 @@ function Login() {
       const usuarioRegistrado = data.find(usuario => usuario.USERNAME === formData.USERNAME);
 
       if (!usuarioRegistrado) {
-        // Si el usuario no está registrado, verificar si es el usuario de acceso directo
+        // Si el usuario no está registrado, verificar el usuario directo
         if (formData.USERNAME === 'user' && formData.PASSWORD === '123') {
           // Autenticación exitosa para usuario 'user'
-          guardarDato('USERNAME', 'user'); // Guardar en localStorage si es necesario
-          navigate('/home'); // Redirigir al usuario a la página de inicio
+          guardarDato('USERNAME', 'user');
+          navigate('/home');
         } else {
           // Mostrar mensaje de usuario no registrado
           alert('El usuario no está registrado o los datos ingresados son incorrectos.');
@@ -38,8 +38,8 @@ function Login() {
         // Verificar la contraseña ingresada con la del usuario registrado
         if (usuarioRegistrado.PASSWORD === formData.PASSWORD) {
           // Autenticación exitosa para usuario registrado
-          guardarDato('USERNAME', usuarioRegistrado.USERNAME); // Guardar en localStorage si es necesario
-          navigate('/home'); // Redirigir al usuario a la página de inicio
+          guardarDato('USERNAME', usuarioRegistrado.USERNAME);
+          navigate('/home');
         } else {
           // Mostrar mensaje de contraseña incorrecta
           alert('Contraseña incorrecta');
@@ -72,3 +72,4 @@ function Login() {
 }
 
 export default Login;
+
