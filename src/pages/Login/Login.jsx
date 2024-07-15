@@ -39,7 +39,7 @@ function Login() {
         guardarDato('tipo', 'tipo_de_usuario');
         guardarDato('campo', 'campo');
         guardarDato('clinica', 'id_de_clinica');
-        navigate("/home");
+        navigate("/TurnosDisponibles");
       } else if (!usuarioRegistrado) {
         alert('El usuario no está registrado');
       } else {
