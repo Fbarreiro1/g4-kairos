@@ -1,0 +1,62 @@
+.navbarContainer{
+    background-color: #01141b !important;
+    height: 8vh;
+}
+
+.nav-link-cont{
+    color: #fcfdfe !important;
+    font-weight: 400;
+    margin-top: 2vh;
+    list-style-type:none;
+    text-decoration: none;
+}
+
+.exitButton{
+    display: flex;
+    width: 100%;
+}
+
+.logoNavBar{
+    margin-left: 2vw;
+    top: .5vh;
+    width: 7vh;
+    position: absolute;
+    border-radius: 50%;
+    display: flex;
+    padding: 0;
+    border: solid 2px #b1bcc2;
+}
+
+.exitButton:hover{
+    cursor: pointer;
+}
+
+.notAdmin{
+    display: none;
+}
+
+.isAdmin{
+    display: list-item;
+}
+
+.navbar-nav-cont{
+    display:flex;
+    justify-content: end;
+    margin-right: 2vw;
+}
+
+.nav-item-cont{
+    margin-left: 3vw;
+    display: flex;
+}
+
+.nav-item-cont:hover{
+ cursor: pointer;
+ text-shadow:#b1bcc2 ;
+}
+
+
+.iconLogout{
+    margin-left: .5vw;
+    height: 3vh;
+}

@@ -1,0 +1,166 @@
+
+.hide {
+  display: none;
+}
+.homeContainerAll{
+    background-color: #ffffff;
+background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25'%3E%3Cdefs%3E%3ClinearGradient id='a' gradientUnits='userSpaceOnUse' x1='0' x2='0' y1='0' y2='100%25' gradientTransform='rotate(240)'%3E%3Cstop offset='0' stop-color='%23ffffff'/%3E%3Cstop offset='1' stop-color='%23B1BCC2'/%3E%3C/linearGradient%3E%3Cpattern patternUnits='userSpaceOnUse' id='b' width='540' height='450' x='0' y='0' viewBox='0 0 1080 900'%3E%3Cg fill-opacity='0.1'%3E%3Cpolygon fill='%23444' points='90 150 0 300 180 300'/%3E%3Cpolygon points='90 150 180 0 0 0'/%3E%3Cpolygon fill='%23AAA' points='270 150 360 0 180 0'/%3E%3Cpolygon fill='%23DDD' points='450 150 360 300 540 300'/%3E%3Cpolygon fill='%23999' points='450 150 540 0 360 0'/%3E%3Cpolygon points='630 150 540 300 720 300'/%3E%3Cpolygon fill='%23DDD' points='630 150 720 0 540 0'/%3E%3Cpolygon fill='%23444' points='810 150 720 300 900 300'/%3E%3Cpolygon fill='%23FFF' points='810 150 900 0 720 0'/%3E%3Cpolygon fill='%23DDD' points='990 150 900 300 1080 300'/%3E%3Cpolygon fill='%23444' points='990 150 1080 0 900 0'/%3E%3Cpolygon fill='%23DDD' points='90 450 0 600 180 600'/%3E%3Cpolygon points='90 450 180 300 0 300'/%3E%3Cpolygon fill='%23666' points='270 450 180 600 360 600'/%3E%3Cpolygon fill='%23AAA' points='270 450 360 300 180 300'/%3E%3Cpolygon fill='%23DDD' points='450 450 360 600 540 600'/%3E%3Cpolygon fill='%23999' points='450 450 540 300 360 300'/%3E%3Cpolygon fill='%23999' points='630 450 540 600 720 600'/%3E%3Cpolygon fill='%23FFF' points='630 450 720 300 540 300'/%3E%3Cpolygon points='810 450 720 600 900 600'/%3E%3Cpolygon fill='%23DDD' points='810 450 900 300 720 300'/%3E%3Cpolygon fill='%23AAA' points='990 450 900 600 1080 600'/%3E%3Cpolygon fill='%23444' points='990 450 1080 300 900 300'/%3E%3Cpolygon fill='%23222' points='90 750 0 900 180 900'/%3E%3Cpolygon points='270 750 180 900 360 900'/%3E%3Cpolygon fill='%23DDD' points='270 750 360 600 180 600'/%3E%3Cpolygon points='450 750 540 600 360 600'/%3E%3Cpolygon points='630 750 540 900 720 900'/%3E%3Cpolygon fill='%23444' points='630 750 720 600 540 600'/%3E%3Cpolygon fill='%23AAA' points='810 750 720 900 900 900'/%3E%3Cpolygon fill='%23666' points='810 750 900 600 720 600'/%3E%3Cpolygon fill='%23999' points='990 750 900 900 1080 900'/%3E%3Cpolygon fill='%23999' points='180 0 90 150 270 150'/%3E%3Cpolygon fill='%23444' points='360 0 270 150 450 150'/%3E%3Cpolygon fill='%23FFF' points='540 0 450 150 630 150'/%3E%3Cpolygon points='900 0 810 150 990 150'/%3E%3Cpolygon fill='%23222' points='0 300 -90 450 90 450'/%3E%3Cpolygon fill='%23FFF' points='0 300 90 150 -90 150'/%3E%3Cpolygon fill='%23FFF' points='180 300 90 450 270 450'/%3E%3Cpolygon fill='%23666' points='180 300 270 150 90 150'/%3E%3Cpolygon fill='%23222' points='360 300 270 450 450 450'/%3E%3Cpolygon fill='%23FFF' points='360 300 450 150 270 150'/%3E%3Cpolygon fill='%23444' points='540 300 450 450 630 450'/%3E%3Cpolygon fill='%23222' points='540 300 630 150 450 150'/%3E%3Cpolygon fill='%23AAA' points='720 300 630 450 810 450'/%3E%3Cpolygon fill='%23666' points='720 300 810 150 630 150'/%3E%3Cpolygon fill='%23FFF' points='900 300 810 450 990 450'/%3E%3Cpolygon fill='%23999' points='900 300 990 150 810 150'/%3E%3Cpolygon points='0 600 -90 750 90 750'/%3E%3Cpolygon fill='%23666' points='0 600 90 450 -90 450'/%3E%3Cpolygon fill='%23AAA' points='180 600 90 750 270 750'/%3E%3Cpolygon fill='%23444' points='180 600 270 450 90 450'/%3E%3Cpolygon fill='%23444' points='360 600 270 750 450 750'/%3E%3Cpolygon fill='%23999' points='360 600 450 450 270 450'/%3E%3Cpolygon fill='%23666' points='540 600 630 450 450 450'/%3E%3Cpolygon fill='%23222' points='720 600 630 750 810 750'/%3E%3Cpolygon fill='%23FFF' points='900 600 810 750 990 750'/%3E%3Cpolygon fill='%23222' points='900 600 990 450 810 450'/%3E%3Cpolygon fill='%23DDD' points='0 900 90 750 -90 750'/%3E%3Cpolygon fill='%23444' points='180 900 270 750 90 750'/%3E%3Cpolygon fill='%23FFF' points='360 900 450 750 270 750'/%3E%3Cpolygon fill='%23AAA' points='540 900 630 750 450 750'/%3E%3Cpolygon fill='%23FFF' points='720 900 810 750 630 750'/%3E%3Cpolygon fill='%23222' points='900 900 990 750 810 750'/%3E%3Cpolygon fill='%23222' points='1080 300 990 450 1170 450'/%3E%3Cpolygon fill='%23FFF' points='1080 300 1170 150 990 150'/%3E%3Cpolygon points='1080 600 990 750 1170 750'/%3E%3Cpolygon fill='%23666' points='1080 600 1170 450 990 450'/%3E%3Cpolygon fill='%23DDD' points='1080 900 1170 750 990 750'/%3E%3C/g%3E%3C/pattern%3E%3C/defs%3E%3Crect x='0' y='0' fill='url(%23a)' width='100%25' height='100%25'/%3E%3Crect x='0' y='0' fill='url(%23b)' width='100%25' height='100%25'/%3E%3C/svg%3E");
+background-attachment: fixed;
+background-size: cover;
+height: 100vh;
+width: 100vw;
+position: fixed;
+}
+
+.homeContainer{
+    animation: activePag .5s ease-in-out;
+
+}
+
+
+.grid-container {
+    margin-left: 1vw;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    grid-column-gap: 0px;
+    grid-row-gap:2vh;
+    margin-right: 2vw;
+    overflow-y: auto;
+    padding: 20px;
+    height: 80vh;
+    margin-top: 5vh;
+  }
+
+  /* width */
+ .grid-container::-webkit-scrollbar {
+    width: 20px;
+  }
+  
+  /* Track */
+  .grid-container::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey;
+    border-radius: 10px;
+  }
+  
+  /* Handle */
+  .grid-container::-webkit-scrollbar-thumb {
+    background: rgb(1, 20, 27, .9);
+    border-radius: 10px;
+  }
+
+  .grid-container::-webkit-scrollbar-thumb:hover{
+    cursor: pointer;
+  }
+  
+.grid-item{
+    background-color: #fff;
+    width: 30vw;
+    height: 27vh;
+    padding: 10px;  
+    font-weight: 400;
+    border-radius: 20px;
+    box-shadow: -1px 4px 14px 0px rgba(1,20,27,0.75);
+-webkit-box-shadow: -1px 4px 14px 0px rgba(1,20,27,0.75);
+-moz-box-shadow: -1px 4px 14px 0px rgba(1,20,27,0.75);
+
+}
+
+.cancelarButton{
+    background-color: #960a05;
+    color: #fff;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: 300;
+    text-align: center;
+    width: 11vw;
+    transition: transform .3s ease;
+    position: sticky;
+    margin-left: 17vw;
+    margin-top: -4vh;
+}
+
+.cancelarButton:hover{
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+.noTurnos{
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 80vh;
+}
+.noTurnos>span{
+  font-size: 4vw;
+  font-weight: 300;
+  margin-bottom: 5vh;
+}
+
+.turnosDispButton{
+  text-decoration: none;
+  color: #fff;
+  background-color: #01141b;
+  border-radius: 30px;
+  padding: 10px;
+  font-size: 1.5vw;
+  font-weight: 200;
+  transition: transform .3s ease;
+}
+
+.turnosDispButton:hover{
+  cursor: pointer;
+  transform: scale(.95);
+
+}
+
+@media
+(width >= 600px) and (width <= 1200px){
+  .grid-container{
+    grid-template-columns: repeat(2, 1fr) !important; 
+  }
+
+  .grid-item{
+    width: 90% !important;
+    height: 27vw !important;
+    font-size: 2vw;
+  }
+
+  .cancelarButton{
+    width: 20vw;
+    margin-left: 19vw;
+    margin-top: 0vh;
+    font-size: 2vw;
+}
+}
+
+@media
+(width <= 600px) {
+  .grid-container{
+    grid-template-columns: repeat(1, 85vw) !important; 
+    overflow-x: hidden;
+  }
+
+  .grid-item{
+    width: 90% !important;
+    height: 30vh !important;
+  }
+
+  .cancelarButton{
+    width: 40vw;
+    position: sticky;
+    margin-left: 30vw;
+    margin-top: 2vh;
+    font-size: 2.2vh;
+    padding: 3px;
+}
+
+.noTurnos>span{
+  font-size: 5vh;
+}
+
+.turnosDispButton{
+  font-size: 2vh;
+}
+}
