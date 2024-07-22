@@ -131,37 +131,37 @@ function Admin() {
     }
   };
 
-  function UsersList({ data, reloadData  }) {
+  function UsersList({ data, reloadData }) {
+    console.log("Datos de usuarios en UsersList:", data); // Depuración
     const handleDeleteUsers = async (id) => {
-        try {
-          await fetchData(`usuarios/${id}`, 'DELETE');
-          // Después de eliminar, recargar los datos
-          reloadData();
-        } catch (error) {
-          console.error('Error al eliminar el usuario:', error);
-          alert('Error al eliminar el usuario');
-        }
-      };
-
-  return (
-    <ul>
-      {data.map(item => (
-        <li key={item.USERNAME}>
-        USERNAME: {item.USERNAME}<br/>
-        NOMBRE: {item.NOMBRE}<br/>
-        TELEFONO: {item.TELEFONO}<br/>
-        CAMPO: {item.N_CAMPO}<br/>
-        TIPO: {item.TIPO}<br/>
-        CLINICA: {item.FK_CLINICAS}<br/>
-        EMAIL: {item.EMAIL}<br/>
-        DNI: {item.DNI}
-          {/* Botón para eliminar */}
-          <div className='deletUserButton' onClick={() => handleDeleteUsers(item.USERNAME)}><IconX/></div>
-        </li>
-      ))}
-    </ul>
-  );
-}
+      try {
+        await fetchData(`usuarios/${id}`, 'DELETE');
+        reloadData(); // Recargar los datos después de eliminar
+      } catch (error) {
+        console.error('Error al eliminar el usuario:', error);
+        alert('Error al eliminar el usuario');
+      }
+    };
+  
+    return (
+      <ul>
+        {data.map(item => (
+          <li key={item.USERNAME}>
+            USERNAME: {item.USERNAME}<br />
+            NOMBRE: {item.NOMBRE}<br />
+            TELEFONO: {item.TELEFONO}<br />
+            CAMPO: {item.N_CAMPO}<br />
+            TIPO: {item.TIPO}<br />
+            CLINICA: {item.FK_CLINICAS}<br />
+            EMAIL: {item.EMAIL}<br />
+            DNI: {item.DNI}
+            <div className='deletUserButton' onClick={() => handleDeleteUsers(item.USERNAME)}><IconX /></div>
+          </li>
+        ))}
+      </ul>
+    );
+  }
+  
 
 
 
@@ -343,13 +343,19 @@ const handleClickTurnos = () => {
 
 const fetchDataTurnosAndUpdate = () => {
   fetchData('turnos')
-    .then(data => setTurnos(data))
+    .then(data => {
+      console.log("Turnos recibidos:", data); // Agrega este log
+      setTurnos(data);
+    })
     .catch(error => console.error('Error:', error));
 };
-
 useEffect(() => {
   fetchDataTurnosAndUpdate();
 }, []);
+
+useEffect(() => {
+  console.log("Estado de turnos actualizado:", turnos); // Agrega este log
+}, [turnos]);
 
 const handleChangeTurnos = (e) =>{
   const {name, value} = e.target;
@@ -372,35 +378,33 @@ const handleSubmitTurnos = async (e)=>{
 
 
 
-function TurnosList({ data, reloadData  }) {
+function TurnosList({ data, reloadData }) {
   const handleDeleteTurnos = async (id) => {
-      try {
-        await fetchData(`turnos/${id}`, 'DELETE');
-        // Después de eliminar, recargar los datos
-        reloadData();
-      } catch (error) {
-        console.error('Error al eliminar el turno:', error);
-        alert('Error al eliminar el turno');
-      }
-    };
+    try {
+      await fetchData(`turnos/${id}`, 'DELETE');
+      reloadData(); // Recargar los datos después de eliminar
+    } catch (error) {
+      console.error('Error al eliminar el turno:', error);
+      alert('Error al eliminar el turno');
+    }
+  };
 
-return (
-  <ul>
-    {data.map(item => (
-      <li key={item.ID}>
-        FECHA: {formatDate(item.FECHA)}<br/>
-        HORA: {formatTime(item.HORA)}<br/>
-        CAMPO: {item.CAMPO_DESC}<br/>
-        CLINICA: {item.CLINICA}<br/>
-        PACIENTE: {item.N_PACIENTE} {item.AP_PACIENTE}<br/>
-        PROFESIONAL: {item.PROFESIONAL}
-        <div className='deletUserButton' onClick={() => handleDeleteTurnos(item.ID)}><IconX/></div>
-        {/* Botón para eliminar */}
-      </li>
-    ))}
-  </ul>
-);
+  return (
+    <ul>
+      {data.map(item => (
+        <li key={item.ID}>
+          FECHA: {formatDate(item.FECHA)}<br/>
+          HORA: {formatTime(item.HORA)}<br/>
+          CAMPO: {item.CAMPO}<br/>
+          CLINICA: {item.FK_CLINICAS}<br/>
+          PACIENTE: {item.FK_PACIENTES}
+          <div className='deletUserButton' onClick={() => handleDeleteTurnos(item.ID)}><IconX/></div>
+        </li>
+      ))}
+    </ul>
+  );
 }
+
 
 
 

@@ -1,4 +1,4 @@
-const BASE_URL = 'https://g4tpback-production.up.railway.app'; // La URL de nuestro servidor Node.js
+const BASE_URL = 'http://localhost:3000'; // La URL de nuestro servidor Node.js
 
 export const fetchData = async (endpoint, method = 'GET', body = null) => {
   const options = {
@@ -17,7 +17,9 @@ export const fetchData = async (endpoint, method = 'GET', body = null) => {
     if (!response.ok) {
       throw new Error(`Error al realizar la solicitud: ${response.status}`);
     }
-    return await response.json();
+    const data = await response.json();
+    console.log('Datos recibidos:', data); // Agregar esto para ver los datos
+    return data;
   } catch (error) {
     console.error('Error:', error);
     throw error;

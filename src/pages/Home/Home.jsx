@@ -159,9 +159,13 @@ function Home() {
 
   const fetchDataAdminAndUpdate = () => {
     fetchData('turnos')
-    .then(data => setTurnosAdmin(data))
-    .catch(error => console.error('Error:', error));
+      .then(data => {
+        console.log('Datos de turnosAdmin:', data); // Agrega este log para verificar los datos
+        setTurnosAdmin(data)
+      })
+      .catch(error => console.error('Error:', error));
   };
+  
   
   useEffect(() => {
     fetchDataAdminAndUpdate();
@@ -169,36 +173,43 @@ function Home() {
 
   
   
-  function AdminList({ data, reloadData  }) {
+  function AdminList({ data, reloadData }) {
+    console.log('Datos recibidos por AdminList:', data); // Verifica los datos recibidos
+  
     const handleCancelarTurnos = async (id) => {
-        try {
-          await fetchData(`turnos/${id}`, 'DELETE');
-          reloadData();
-        } catch (error) {
-          console.error('Error al eliminar el turno:', error);
-          alert('Error al eliminar el turno');
-        }
-      };
-
-      return (
-        <div>
-        <div className={turnosAdmin.length === 0 ? 'noTurnos' : 'disable'}><span>NO HAY TURNOS<br/>PENDIENTES</span></div>
-        <div className="grid-container">
-      {turnosAdmin.map(turno => (
-      <div className="grid-item">
-        FECHA: {formatDate(turno.FECHA)}<br/>
-        HORA: {formatTime(turno.HORA)}<br/>
-        CLINICA: {turno.CLINICA}<br/>
-        PACIENTE: {turno.N_PACIENTE} {turno.AP_PACIENTE}<br/>
-        PROFESIONAL: {turno.PROFESIONAL}<br/>
-        CAMPO: {turno.CAMPO_DESC}
-        <div className='cancelarButton' key={turno.ID} onClick={() => handleCancelarTurnos(turno.ID)}>Cancelar turno <IconX/></div>
-      </div>
-    ))}
-      </div>
-      </div>
-      );
+      try {
+        await fetchData(`turnos/${id}`, 'DELETE');
+        reloadData();
+      } catch (error) {
+        console.error('Error al eliminar el turno:', error);
+        alert('Error al eliminar el turno');
       }
+    };
+  
+    return (
+      <div>
+        <div className={data.length === 0 ? 'noTurnos' : 'disable'}>
+          <span>NO HAY TURNOS<br/>PENDIENTES</span>
+        </div>
+        <div className="grid-container">
+          {data.map(turno => (
+            <div className="grid-item" key={turno.ID}>
+              FECHA: {formatDate(turno.FECHA)}<br/>
+              HORA: {formatTime(turno.HORA)}<br/>
+              CLINICA: {turno.CLINICA}<br/>
+              PACIENTE: {turno.N_PACIENTE} {turno.AP_PACIENTE}<br/>
+              PROFESIONAL: {turno.PROFESIONAL}<br/>
+              CAMPO: {turno.CAMPO_DESC}
+              <div className='cancelarButton' onClick={() => handleCancelarTurnos(turno.ID)}>
+                Cancelar turno <IconX/>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    );
+  }
+  
   
 
 
@@ -210,17 +221,17 @@ function Home() {
       <div className='homeContainer'>
 
         {/* HOME ADMINISTRADOR */}
-      <div className={tipo === 'AD' ? '' : 'disable'}> 
+      <div className={tipo === 'administrador' ? '' : 'hide' }> 
         <AdminList data={turnosAdmin} reloadData={fetchDataAdminAndUpdate}/>
         </div>
       
         {/* HOME ADMINISTRADOR */}
-        <div className={tipo === 'CO' ? '' : 'disable'}> 
+        <div className={tipo === 'CO' ? '' : ''}> 
         <AdminList data={turnosAdmin} reloadData={fetchDataAdminAndUpdate}/>
         </div>
 
     {/* HOME PROFESIONAL */}
-      <div className={tipo === 'PR' ? '' : 'disable'}> 
+      <div className={tipo === 'profesional' ? '' : 'hide' }> 
         <div className='homeProf'>
         <ProfList data={turnosProf} reloadData={fetchDataProfAndUpdate}/>
           </div>
@@ -230,14 +241,14 @@ function Home() {
 
 
     {/* HOME CLINICA */}
-      <div className={tipo === 'CL' ? '' : 'disable'}>
+      <div className={tipo === 'CL' ? '' : ''}>
       <div className='homeProf'>
         <ClinList data={turnosClin} reloadData={fetchDataClinAndUpdate}/>
           </div>
       </div>
 
       {/* HOME PACIENTE */}
-      <div className={tipo === 'PA' ? '' : 'disable'}>
+      <div className={tipo === 'PA' ? '' : ''}>
       <PacList data={turnosPac} reloadData={fetchDataPacAndUpdate}/>
       </div>
       </div>
