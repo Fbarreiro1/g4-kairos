@@ -1,0 +1,7 @@
+[submodule "g4-back/kairos-g4solutions-back"]
+    path = g4-back/kairos-g4solutions-back
+    url = https://github.com/tu-usuario/kairos-g4solutions-back.git
+
+[submodule "g4-front/kairos-g4solutions-front"]
+    path = g4-front/kairos-g4solutions-front
+    url = https://github.com/tu-usuario/kairos-g4solutions-front.git
