@@ -11,8 +11,7 @@
 
 // Middleware para CORS
 const corsOptions = {
-  origin: 'https://g4-kairos.vercel.app',
-  origin:'https://g4-kairos-production.up.railway.app',
+   origin: ['https://g4-kairos.vercel.app', 'https://g4-kairos-production.up.railway.app'],
   optionsSuccessStatus: 200
 };
 
