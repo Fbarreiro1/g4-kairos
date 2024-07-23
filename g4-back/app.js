@@ -10,11 +10,13 @@
   app.use(cors());
 
 // Middleware para CORS
-app.use(cors({
+const corsOptions = {
   origin: 'https://g4-kairos.vercel.app',
-  methods: 'GET,POST,PUT,DELETE',
-  allowedHeaders: 'Content-Type,Authorization'
-}));
+  origin:'https://g4-kairos-production.up.railway.app',
+  optionsSuccessStatus: 200
+};
+
+app.use(cors(corsOptions));
   // Middleware body-parser para analizar el cuerpo de las solicitudes
   app.use(bodyParser.json());
 
