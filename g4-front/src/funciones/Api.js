@@ -1,4 +1,4 @@
-const BASE_URL = 'http://localhost:3000'; // La URL de nuestro servidor Node.js
+const BASE_URL = process.env.REACT_APP_BACKEND_URL;
 
 export const fetchData = async (endpoint, method = 'GET', body = null) => {
   const options = {
