@@ -5,5 +5,5 @@ module.exports = {
     DB_NAME: process.env.DB_NAME || 'clinica_db',
     DB_PORT: process.env.DB_PORT || 3306,
     PORT: process.env.PORT || 3000,
-    MYSQL_URL: process.env. MYSQL_URL 
+    MYSQL_URL: process.env. mysqlurl 
   };
