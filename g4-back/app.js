@@ -16,7 +16,7 @@
 
   // MySQL Connection
   const connection = mysql.createConnection({
-    host: DB_HOST,
+    host: "viaduct.proxy.rlwy.net",
     user: DB_USER,
     password: DB_PASSWORD,
     database: DB_NAME,
