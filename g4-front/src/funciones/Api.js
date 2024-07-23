@@ -1,4 +1,4 @@
-const BASE_URL = "https://g4-kairos-production.up.railway.app";
+const BASE_URL = "g4-kairos-production.up.railway.app";
 
 export const fetchData = async (endpoint, method = 'GET', body = null) => {
   const options = {
