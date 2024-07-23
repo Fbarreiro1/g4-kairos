@@ -1,4 +1,4 @@
-const BASE_URL = process.env.REACT_APP_BACKEND_URL;
+const BASE_URL = REACT_APP_BACKEND_URL;
 
 export const fetchData = async (endpoint, method = 'GET', body = null) => {
   const options = {
