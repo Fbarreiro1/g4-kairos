@@ -2,7 +2,7 @@
   const mysql = require('mysql2');
   const cors = require('cors');
   const bodyParser = require('body-parser');
-  const {MYSQL_URL, PORT} = require('./config.js');
+  const {MYSQL_URL, DB_HOST, DB_USER, DB_PASSWORD, DB_NAME, DB_PORT, PORT} = require('./config.js');
   
   const app = express();
 
