@@ -2,7 +2,7 @@
   const mysql = require('mysql2');
   const cors = require('cors');
   const bodyParser = require('body-parser');
-  const {MYSQL_URL, PORT} = require('./config.js');
+  const {mysqlurl, PORT} = require('./config.js');
   
   const app = express();
 
@@ -17,7 +17,7 @@
 
 
 // Crear la conexión usando la URL de conexión
-const connection = mysql.createConnection(MYSQL_URL);
+const connection = mysql.createConnection(mysqlurl);
 
   connection.connect((err) => {
     if (err) {
