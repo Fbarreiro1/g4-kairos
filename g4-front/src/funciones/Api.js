@@ -15,7 +15,8 @@ export const fetchData = async (endpoint, method = 'GET', body = null) => {
   try {
     const response = await fetch(`${BASE_URL}/${endpoint}`, options);
     if (!response.ok) {
-      throw new Error(`Error al realizar la solicitud: ${response.status}`);
+      const errorText = await response.text(); // Obtener el texto del error del servidor
+      throw new Error(`Error al realizar la solicitud: ${response.status} - ${errorText}`);
     }
     const data = await response.json();
     console.log('Datos recibidos:', data); // Agregar esto para ver los datos
