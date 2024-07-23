@@ -2,8 +2,8 @@
   const mysql = require('mysql2');
   const cors = require('cors');
   const bodyParser = require('body-parser');
-  const {F, DB_USER, DB_PASSWORD, DB_NAME, DB_PORT, PORT } = require('./config.js');
-
+  const {MYSQL_URL } = require('./config.js');
+  
   const app = express();
 
   // Middleware CORS -- permite que el servidor reciba solicitudes de otras rutas
@@ -14,14 +14,10 @@
   app.use(bodyParser.json());
 
 
-  // MySQL Connection
-  const connection = mysql.createConnection({
-    host: F,
-    user: DB_USER,
-    password: DB_PASSWORD,
-    database: DB_NAME,
-    port: DB_PORT
-  });
+
+
+// Crear la conexión usando la URL de conexión
+const connection = mysql.createConnection(MYSQL_URL);
 
   connection.connect((err) => {
     if (err) {
