@@ -9,7 +9,12 @@
   // Middleware CORS -- permite que el servidor reciba solicitudes de otras rutas
   app.use(cors());
 
-
+// Middleware para CORS
+app.use(cors({
+  origin: 'https://g4-kairos.vercel.app',
+  methods: 'GET,POST,PUT,DELETE',
+  allowedHeaders: 'Content-Type,Authorization'
+}));
   // Middleware body-parser para analizar el cuerpo de las solicitudes
   app.use(bodyParser.json());
 
