@@ -4,6 +4,4 @@ G4-KAIROS is an appointment management system designed for clinics, built using 
 
 DEMO: kairos-g4solutions-front.vercel.app/
 
-DEMO USER:
-username: user
-password: 123
+
